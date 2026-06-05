@@ -19,7 +19,7 @@ This repo now includes a browser-based CaseGrid MVP:
 ## Run
 
 ```bash
-python3 -m http.server 4173 --bind 127.0.0.1
+python3 serve.py
 ```
 
 Then open <http://127.0.0.1:4173>.
@@ -27,6 +27,21 @@ Then open <http://127.0.0.1:4173>.
 No package install is required. The app uses browser-native APIs and stores demo
 state in local storage. If `npm` is available, `npm start` runs the same local
 server command.
+
+If you see a directory listing, an old server is probably still running from a
+different folder. Stop it with `Ctrl-C`, then run `python3 serve.py` from this
+repo. If port 4173 is busy, use another port:
+
+```bash
+python3 serve.py 4174
+```
+
+If you prefer Python's built-in static server directly, make sure it serves the
+repository root:
+
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1 --directory /Users/chasebryan/Documents/case-grid
+```
 
 ## License
 

@@ -4,7 +4,7 @@
   "private": true,
   "description": "CaseGrid MVP - evidence-first case intelligence for lawful investigations.",
   "scripts": {
-    "start": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "start": "python3 serve.py",
     "check": "node --check src/app.js"
   },
   "license": "CC-BY-4.0"
