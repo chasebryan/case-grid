@@ -31,7 +31,10 @@ def main():
         raise
     print(f"CaseGrid MVP serving {ROOT}")
     print(f"Open http://{HOST}:{port}/")
-    server.serve_forever()
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nCaseGrid server stopped.")
 
 
 if __name__ == "__main__":
